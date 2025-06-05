@@ -1,0 +1,252 @@
+/* ------------------
+   基本設定與字體導入
+------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --color-primary-dark: #111c38;
+  --color-accent-cyan: #03c9ee;
+  --color-accent-pink: #e51577;
+  --color-background: #f7fafd;
+  --color-text: #111c38;
+  --color-white: #ffffff;
+}
+
+/* ------------------
+   全站基礎樣式
+------------------ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ------------------
+   標題設定
+------------------ */
+h1, h2, h3, h4, h5 {
+  color: var(--color-primary-dark);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+/* ------------------
+   導覽列樣式
+------------------ */
+/* ------------------
+   Header：霧面半透明白色
+------------------ */
+.frosted-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.6); /* 半透明白 */
+  backdrop-filter: blur(10px);          /* 霧面玻璃效果 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.nav-links a {
+  margin-left: 24px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent-cyan);
+}
+
+/* ------------------
+   下拉選單樣式
+------------------ */
+.te {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color:var(--color-text);
+  text-decoration: none;
+}
+
+.te a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color:none;
+  color:#111c38;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-white);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--color-primary-dark);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color:#03c9ee;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ------------------
+   按鈕樣式
+------------------ */
+.button, button {
+  color:#03c9ee;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ------------------
+   表格樣式
+------------------ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+/* ------------------
+   表單樣式
+------------------ */
+input, select, textarea {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  padding: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ------------------
+   小元件
+------------------ */
+.tag {
+  background-color: var(--color-accent-cyan);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 0 4px 4px 0;
+}
+
+.image-placeholder {
+  background-color: #e0e0e0;
+  color: #666;
+  font-size: 1rem;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #f6f7f9ff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #111c38ff;
+}
+
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background-color: #f6f0f0;
+  color: #555;
+}
+
+body {
+  background: url('curve_background.svg.svg');
+  background-size: cover;
+  background-position: center;
+}
