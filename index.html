@@ -236,6 +236,53 @@
         object-position: top;
       }
     }
+
+     @media (max-width: 768px) {
+      .theme-block {
+        top: 7%;
+        left: 63%;
+        transform: translateX(-50%);
+        text-align: left;
+        max-width: 80%;
+      }
+
+      .theme-block h1{
+        font-size: 1rem;
+      }
+
+      .theme-block p{
+        font-size: 0.6rem;
+      }
+
+      .callfor-block {
+        top: 28%;
+        align-items: center;
+      }
+
+      .call-item {
+        weight: 60%
+        height: auto;
+        font-size: 60%;
+        gap: 10%;
+      }
+
+      .schedule-section {
+        top: 70%;
+        width: 90%;
+        font-size: 0.9rem;
+      }
+
+      .subscribe-button-wrapper {
+        top: 90%;
+      }
+
+      .bg-img {
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+      }
+     }
+    
   </style>
 </head>
 <body>
@@ -256,6 +303,7 @@
     <div class="bg-container">
     <picture>
        <source srcset="bg_1024.jpg" media="(max-width: 1024px)">
+      <source srcset="bg_768.jpg" media="(max-width: 768px)">
       <img src="bg.jpg" alt="background" class="bg-img">
     </picture>
 
